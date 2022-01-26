@@ -4,7 +4,7 @@ const api = "3537479e19e84c528b25dbb34acd99c9";
 let html = "";
 // async function to fetch news  with the help of api
 async function fetchnews() {
-  let response = await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${api}` );
+  let response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${api}` );
   let user = await response.json();
   return user;
 }
@@ -15,7 +15,7 @@ news.then((data) => {
   console.log(data.articles);
   let newsaccodin = data.articles;
   newsaccodin.forEach((element) => {
-    console.log(html.length);
+    
 
     let article = `<div class="box news"  >
     <div class="col-sm-6">
